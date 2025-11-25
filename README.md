@@ -23,34 +23,6 @@ La app permite simular acciones de **eliminar** y **actualizar** motos mediante 
 
 ---
 
-## Estructura del proyecto
-iesvdc.segdodam.recyclerviewmotos/
-│
-├─ Adapter/ # Adaptadores para RecyclerView
-│ └─ AdapterMoto.kt
-│
-├─ adapters/ # ViewHolders
-│ └─ ViewHMoto.kt
-│
-├─ Controller/ # Lógica de control y manejo de eventos
-│ └─ Controller.kt
-│
-├─ models/ # Clases de datos (POJOs)
-│ └─ Moto.kt
-│
-├─ repository/ # Datos simulados
-│ └─ Repository.kt
-│
-├─ MainActivity.kt # Activity principal
-└─ res/layout/ # Layouts XML
-├─ activity_main.xml
-└─ recycler_view.xml
-
-
-
-
----
-
 ## Funcionalidades
 
 1. **Lista horizontal de motos**:  
