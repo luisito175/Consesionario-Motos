@@ -24,5 +24,51 @@ La app permite simular acciones de **eliminar** y **actualizar** motos mediante 
 ---
 
 ## Estructura del proyecto
+iesvdc.segdodam.recyclerviewmotos/
+│
+├─ Adapter/ # Adaptadores para RecyclerView
+│ └─ AdapterMoto.kt
+│
+├─ adapters/ # ViewHolders
+│ └─ ViewHMoto.kt
+│
+├─ Controller/ # Lógica de control y manejo de eventos
+│ └─ Controller.kt
+│
+├─ models/ # Clases de datos (POJOs)
+│ └─ Moto.kt
+│
+├─ repository/ # Datos simulados
+│ └─ Repository.kt
+│
+├─ MainActivity.kt # Activity principal
+└─ res/layout/ # Layouts XML
+├─ activity_main.xml
+└─ recycler_view.xml
+
+
+
+
+---
+
+## Funcionalidades
+
+1. **Lista horizontal de motos**:  
+   - Se puede deslizar horizontalmente para ver todas las motos.
+2. **Carga de imágenes desde internet** con Glide.
+3. **Botones de acción por item**:  
+   - **Actualizar**: Llama a la función `updateMoto(pos)` en el `Controller`.  
+   - **Eliminar**: Llama a la función `delMoto(pos)` en el `Controller`.
+4. **Toolbar superior**: Muestra el nombre de la aplicación.
+5. **Botón flotante (ImageButton)**: Posicionado sobre el RecyclerView, listo para agregar nuevas motos.
+
+---
+
+## Cómo ejecutar
+
+1. Clonar el repositorio:
+```bash
+git clone https://github.com/tu_usuario/MotoRecyclerApp.git
+```
 
 [Video Demostrativo](https://github.com/tu_usuario/MotoRecyclerApp)
