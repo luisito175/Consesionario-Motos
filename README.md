@@ -14,6 +14,11 @@ Este es un proyecto de Android que demuestra el uso de `RecyclerView` para mostr
 - **Interfaz de Usuario Moderna**: Utiliza `DialogFragment` para una experiencia de edición y adición fluida sin cambiar de pantalla.
 - **Arquitectura Simple**: Emplea un patrón `Controller` para separar la lógica de negocio de la interfaz de usuario, facilitando el mantenimiento del código.
 
+## Demostraciones en Vídeo
+
+- **Versión 1.2**: [Ver demostración en YouTube](https://youtu.be/ULpFjaF5WlY)
+- **Versión 1.1**: [Ver demostración en YouTube](https://youtu.be/6ClddBkvGy8)
+
 ## Componentes Clave
 
 - **`MainActivity.kt`**: Actividad principal que contiene el `RecyclerView` y coordina las interacciones principales.
