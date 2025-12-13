@@ -12,6 +12,7 @@
         android:padding="25dp" />
 
     <ImageButton
+        android:id="@+id/btnAdd"
         android:layout_width="156dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"

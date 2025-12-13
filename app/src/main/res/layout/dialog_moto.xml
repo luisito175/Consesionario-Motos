@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#FEAFAFAF"
+        >
+
+
+
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="12dp"
+            android:contentDescription="Imagen de la moto"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/ic_menu_gallery"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="-3dp" />
+
+        <Button
+            android:id="@+id/btnSelectImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="Seleccionar imagen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imgPreview"
+            tools:layout_editor_absoluteY="49dp" />
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="176dp"
+            android:text="Añadir / Editar Moto"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtMarca"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Marca"
+            app:layout_constraintTop_toBottomOf="@id/tvTitulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/edtModelo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Modelo"
+            app:layout_constraintTop_toBottomOf="@id/edtMarca"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/edtCaracteristicas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Características"
+            app:layout_constraintTop_toBottomOf="@id/edtModelo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/edtImagen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="URL Imagen"
+            app:layout_constraintTop_toBottomOf="@id/edtCaracteristicas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnAceptar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Aceptar"
+            android:backgroundTint="#000000"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/edtImagen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/btnAceptar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

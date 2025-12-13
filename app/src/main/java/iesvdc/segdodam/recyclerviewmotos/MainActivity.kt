@@ -18,6 +18,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         init()
+
+        binding.btnAdd.setOnClickListener {
+            controller.addMoto()
+        }
+
     }
 
     private fun init() {

@@ -5,6 +5,7 @@ import android.widget.Adapter
 import android.widget.Toast
 import androidx.constraintlayout.helper.widget.Carousel
 import iesvdc.segdodam.recyclerviewmotos.Adapter.AdapterMoto
+import iesvdc.segdodam.recyclerviewmotos.Dialogs.MotoDialogFragment
 import iesvdc.segdodam.recyclerviewmotos.MainActivity
 import iesvdc.segdodam.recyclerviewmotos.models.Moto
 
@@ -35,8 +36,28 @@ class Controller(private val context: Context) {
     }
 
     fun updateMoto(pos: Int) {
-        Toast.makeText(context, "Actualizar moto: ${listMotos[pos].modelo}", Toast.LENGTH_SHORT).show()
+        val activity = context as MainActivity
+        val moto = listMotos[pos]
+
+        val dialog = MotoDialogFragment(moto) {motoActualizada ->
+            listMotos[pos] = motoActualizada
+            adapter.notifyItemChanged(pos)
+        }
+        dialog.show(activity.supportFragmentManager, "EDIT_MOTO")
     }
+
+    fun addMoto() {
+        val activity = context as MainActivity
+
+        // Creamos el dialog sin moto existente
+        val dialog = MotoDialogFragment(null) { nuevaMoto ->
+            listMotos.add(nuevaMoto)
+            adapter.notifyItemInserted(listMotos.size - 1)
+        }
+
+        dialog.show(activity.supportFragmentManager, "ADD_MOTO")
+    }
+
 
     fun setAdapter(){
         val myActivity = context as MainActivity
